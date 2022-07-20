@@ -1,0 +1,74 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.sui-AtomImage {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.sui-AtomImage-figure {
+  background-color: lightgrey;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100%;
+}
+.sui-AtomImage-figure--skeleton {
+  background-size: contain;
+}
+.sui-AtomImage-figure--placeholder {
+  background-size: cover;
+}
+.sui-AtomImage.is-loading .sui-AtomImage-figure--placeholder {
+  filter: blur(5px);
+}
+.sui-AtomImage.is-loaded .sui-AtomImage-figure--placeholder {
+  filter: blur(0);
+  transition: 1s filter linear;
+}
+.sui-AtomImage.is-loaded .sui-AtomImage-spinner {
+  display: none;
+}
+.sui-AtomImage-image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.sui-AtomImage.is-loading .sui-AtomImage-image {
+  opacity: 0;
+}
+.sui-AtomImage.is-loaded .sui-AtomImage-image {
+  opacity: 1;
+}
+.sui-AtomImage.is-error .sui-AtomImage-image {
+  display: none;
+}
+.sui-AtomImage-error, .sui-AtomImage-spinner {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
