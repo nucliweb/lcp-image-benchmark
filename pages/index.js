@@ -36,7 +36,7 @@ export default function Home() {
               </p>
             </a>
           </Link>
-          <Link href="/atom-image-placeholder">
+          <Link href="/atom-image-placeholder-suspense">
             <a className={styles.card}>
               <h2>&lt;AtomImage&gt; &rarr;</h2>
               <p>
