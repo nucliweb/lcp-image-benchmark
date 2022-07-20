@@ -35,7 +35,11 @@ export default function AtomImagePlaceholderSuspensePage() {
         </nav>
         {IMAGES.map((image, idx) => {
           return (
-            <Suspense fallback={<></>} key={idx}>
+            <Suspense
+              fallback={<></>}
+              key={idx}
+              className={styles.imageWrapper}
+            >
               <div className={styles.imageWrapper}>
                 <AtomImage
                   alt="Awesome image"
