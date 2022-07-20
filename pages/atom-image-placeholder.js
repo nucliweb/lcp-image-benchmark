@@ -13,7 +13,9 @@ export default function AtomImagePlaceholderPage() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>LCP Image Benchmark: &lt;AtomImage&gt; Component</title>
+        <title>
+          LCP Image Benchmark: &lt;AtomImage&gt; Component with Placeholder
+        </title>
         <meta
           name="description"
           content="LCP Image Benchmark: <AtomImage> Component with Placeholder"

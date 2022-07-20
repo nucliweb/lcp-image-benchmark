@@ -45,6 +45,24 @@ export default function Home() {
               </p>
             </a>
           </Link>
+          <Link href="/atom-image-skeleton">
+            <a className={styles.card}>
+              <h2>&lt;AtomImage&gt; &rarr;</h2>
+              <p>
+                Load list of images with SUI &lt;AtomImage&gt; component with
+                skeleton
+              </p>
+            </a>
+          </Link>
+          <Link href="/atom-image-skeleton-first-image">
+            <a className={styles.card}>
+              <h2>&lt;AtomImage&gt; &rarr;</h2>
+              <p>
+                Load list of images with SUI &lt;AtomImage&gt; component with
+                skeleton in the first image
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
     </div>

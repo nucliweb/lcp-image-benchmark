@@ -9,25 +9,24 @@ dynamic(import("@s-ui/react-atom-image/lib/index"), { ssr: false }); // Async AP
 
 import { IMAGES } from "../config/index.js";
 
-export default function AtomImagePlaceholderFirstImagePage() {
-  if (typeof window === "undefined") return <></>;
-
+export default function AtomImageSkeletonFirstImagePage() {
   return (
     <div className={styles.container}>
       <Head>
         <title>
-          LCP Image Benchmark: &lt;AtomImage&gt; Component in the first image
+          LCP Image Benchmark: &lt;AtomImage&gt; Component with Skeleton in the
+          first images
         </title>
         <meta
           name="description"
-          content="LCP Image Benchmark: <AtomImage> Component with Placeholder in the first image"
+          content="LCP Image Benchmark: <AtomImage> Component with Skeleton in the first images"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          &lt;AtomImage&gt; Component with Placeholder in the first image
+          &lt;AtomImage&gt; Component with Skeleton in the first images
         </h1>
         <nav className={styles.nav}>
           <Link href="/">&larr; Back to home</Link>
@@ -41,7 +40,7 @@ export default function AtomImagePlaceholderFirstImagePage() {
                 decoding={idx === 0 ? "sync" : "auto"}
                 fetchpriority={idx === 0 ? "high" : "auto"}
                 loading={idx === 0 ? "eager" : "lazy"}
-                placeholder={idx === 0 ? `./images/placeholder/${image}` : null}
+                skeleton={idx === 0 ? `./images/placeholder/${image}` : null}
                 height={800}
                 width={640}
               />
