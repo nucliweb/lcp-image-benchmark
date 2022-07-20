@@ -76,6 +76,7 @@
 
 .imageWrapper {
   margin-bottom: 2em;
+  min-height: 800px;
 }
 
 .nav {
