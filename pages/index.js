@@ -36,12 +36,12 @@ export default function Home() {
               </p>
             </a>
           </Link>
-          <Link href="/atom-image-placeholder-suspense">
+          <Link href="/atom-image-placeholder-first-image">
             <a className={styles.card}>
               <h2>&lt;AtomImage&gt; &rarr;</h2>
               <p>
                 Load list of images with SUI &lt;AtomImage&gt; component with
-                placeholder & Suspense
+                placeholder in the first image
               </p>
             </a>
           </Link>

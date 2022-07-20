@@ -2,7 +2,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { Suspense } from "react";
 import styles from "../styles/Home.module.css";
 
 const AtomImage = dynamic(import("@s-ui/react-atom-image"), { ssr: false }); // Async API cannot be server-side rendered
@@ -35,24 +34,18 @@ export default function AtomImagePlaceholderSuspensePage() {
         </nav>
         {IMAGES.map((image, idx) => {
           return (
-            <Suspense
-              fallback={<></>}
-              key={idx}
-              className={styles.imageWrapper}
-            >
-              <div className={styles.imageWrapper}>
-                <AtomImage
-                  alt="Awesome image"
-                  src={`./images/${image}`}
-                  decoding={idx === 0 ? "sync" : "auto"}
-                  fetchpriority={idx === 0 ? "high" : "auto"}
-                  loading={idx === 0 ? "eager" : "lazy"}
-                  placeholder={`./images/placeholder/${image}`}
-                  height={800}
-                  width={640}
-                />
-              </div>
-            </Suspense>
+            <div className={styles.imageWrapper} key={idx}>
+              <AtomImage
+                alt="Awesome image"
+                src={`./images/${image}`}
+                decoding={idx === 0 ? "sync" : "auto"}
+                fetchpriority={idx === 0 ? "high" : "auto"}
+                loading={idx === 0 ? "eager" : "lazy"}
+                placeholder={idx === 0 ? `./images/placeholder/${image}` : null}
+                height={800}
+                width={640}
+              />
+            </div>
           );
         })}
       </main>
