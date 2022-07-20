@@ -15,22 +15,27 @@ export default function Home() {
         <h1 className={styles.title}>LCP Image Benchmark</h1>
 
         <div className={styles.grid}>
-          <Link href="/img" className={styles.card}>
-            <h2>&lt;img&gt; tag &rarr;</h2>
-            <p>Load list of images with native &lt;img&gt; tag</p>
+          <Link href="/img">
+            <a className={styles.card}>
+              <h2>&lt;img&gt; tag &rarr;</h2>
+              <p>Load list of images with native &lt;img&gt; tag</p>
+            </a>
+          </Link>
+          <Link href="/atom-image">
+            <a className={styles.card}>
+              <h2>&lt;AtomImage&gt; &rarr;</h2>
+              <p>Load list of images with SUI &lt;AtomImage&gt; component</p>
+            </a>
           </Link>
 
-          <Link href="/atom-image" className={styles.card}>
-            <h2>&lt;AtomImage&gt; &rarr;</h2>
-            <p>Load list of images with SUI &lt;AtomImage&gt; component</p>
-          </Link>
-
-          <Link href="/atom-image-placeholder" className={styles.card}>
-            <h2>&lt;AtomImage&gt; &rarr;</h2>
-            <p>
-              Load list of images with SUI &lt;AtomImage&gt; component with
-              placeholder
-            </p>
+          <Link href="/atom-image-placeholder">
+            <a className={styles.card}>
+              <h2>&lt;AtomImage&gt; &rarr;</h2>
+              <p>
+                Load list of images with SUI &lt;AtomImage&gt; component with
+                placeholder
+              </p>
+            </a>
           </Link>
         </div>
       </main>

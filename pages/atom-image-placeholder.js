@@ -7,7 +7,7 @@ import styles from "../styles/Home.module.css";
 const AtomImage = dynamic(import("@s-ui/react-atom-image"), { ssr: false }); // Async API cannot be server-side rendered
 dynamic(import("@s-ui/react-atom-image/lib/index"), { ssr: false }); // Async API cannot be server-side rendered
 
-import { IMAGES } from "./config.js";
+import { IMAGES } from "../config/index.js";
 
 export default function AtomImagePlaceholderPage() {
   return (

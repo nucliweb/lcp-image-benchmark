@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 
-import { IMAGES } from "./config.js";
+import { IMAGES } from "../config/index.js";
 
 export default function ImgPage() {
   return (
