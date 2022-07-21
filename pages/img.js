@@ -21,17 +21,24 @@ export default function ImgPage() {
         </nav>
         {IMAGES.map((image, idx) => {
           return (
-            <div className={styles.imageWrapper} key={idx}>
-              <img
-                alt="Awesome image"
-                src={`./images/${image}`}
-                decoding={idx === 0 ? "sync" : "auto"}
-                fetchpriority={idx === 0 ? "high" : "auto"}
-                loading={idx === 0 ? "eager" : "lazy"}
-                height={800}
-                width={640}
-              />
-            </div>
+            <>
+              {idx === 0 ? (
+                <Head>
+                  <link rel="preload" as="image" href={`./images/${image}`} />
+                </Head>
+              ) : null}
+              <div className={styles.imageWrapper} key={idx}>
+                <img
+                  alt="Awesome image"
+                  src={`./images/${image}`}
+                  decoding={idx === 0 ? "sync" : "auto"}
+                  fetchpriority={idx === 0 ? "high" : "auto"}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                  height={800}
+                  width={640}
+                />
+              </div>
+            </>
           );
         })}
       </main>
