@@ -22,11 +22,6 @@ export default function ImgPage() {
         {IMAGES.map((image, idx) => {
           return (
             <>
-              {idx === 0 ? (
-                <Head>
-                  <link rel="preload" as="image" href={`./images/${image}`} />
-                </Head>
-              ) : null}
               <div className={styles.imageWrapper} key={idx}>
                 <img
                   alt="Awesome image"
