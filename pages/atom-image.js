@@ -33,9 +33,6 @@ export default function AtomImagePage() {
                 <AtomImage
                   alt="Awesome image"
                   src={`./images/${image}`}
-                  decoding={idx === 0 ? "sync" : "auto"}
-                  fetchpriority={idx === 0 ? "high" : "auto"}
-                  loading={idx === 0 ? "eager" : "lazy"}
                   height={800}
                   width={640}
                 />
